@@ -8,7 +8,7 @@ export default function Input({ title, options, bg, setFunction }) {
         onChange={(e) => setFunction(e.target.value)} 
         name={title} 
         id={title} 
-        className={`${!bg ? 'bg-gray-900' : 'bg-gray-800'} font-medium text-white text-md rounded-md block w-full pb-2 pl-1 focus:ring-gray-500`}
+        className={`${!bg ? 'bg-gray-900' : 'bg-gray-800'} font-medium text-white text-md rounded-md block w-full pb-2 pl-1`}
       >
         <option value="">Select...</option>
         {

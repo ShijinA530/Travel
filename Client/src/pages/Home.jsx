@@ -42,7 +42,7 @@ export default function Home({ results, setResults, origin, setOrigin, destinati
         <Input title="Destination" options={destinationOptions} bg={false} setFunction={setDestination} />
         <Input title="Cabin Selection" options={cabinOptions} bg={true} setFunction={setCabin} />
         <div className='max-w-sm mx-auto' >
-          <button type='submit' className='float-left bg-green-500 text-white p-2 rounded-md w-28'>Search</button>
+          <button type='submit' className='float-left bg-custom-green  hover:bg-green-500 text-white p-2 rounded-md w-28'>Search</button>
         </div>
         
       </form>
