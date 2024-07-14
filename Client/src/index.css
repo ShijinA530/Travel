@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    @apply text-white min-h-screen;
+    background-color: rgb(25, 42, 35);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  /* rgb(25, 42, 35) */
