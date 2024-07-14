@@ -3,9 +3,8 @@ import Input from '../components/Input';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-export default function Home() {
-  const [origin, setOrigin] = useState('');
-  const [destination, setDestination] = useState('');
+export default function Home({ results, setResults, origin, setOrigin, destination, setDestination }) { // Accept setResults as a prop
+
   const [cabin, setCabin] = useState('');
   const navigate = useNavigate();
 
@@ -15,11 +14,14 @@ export default function Home() {
     const selection = { origin, destination, cabinSelection: [cabin] };
 
     try {
-      console.log(JSON.stringify(selection));
+      console.log(selection);
 
       // Make the API call
-      const response = await axios.post('http://localhost:3000/update-request', JSON.stringify(selection));
+      const response = await axios.post('http://localhost:3000/update-request', selection);
       console.log('Response:', response.data);
+
+      // Set the results in App state
+      setResults(response.data.data); // Assuming response.data is the array of results
 
       // Navigate to search results page
       navigate('/searchresult');
