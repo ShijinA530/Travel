@@ -35,13 +35,16 @@ export default function Home({ results, setResults, origin, setOrigin, destinati
   const cabinOptions = ["Economy", "Business", "First"];
 
   return (
-    <div className='mb-20'>
-      <h4 className="sm:text-lg text-lg font-semibold my-6 text-white">Choose Origin & Destination Airports:</h4>
+    <div className='mt-14 mb-20'>
+      <h4 className="text-lg font-semibold my-6 text-white">Choose Origin & Destination Airports:</h4>
       <form onSubmit={handleSubmit}>
         <Input title="Origin" options={originOptions} bg={false} setFunction={setOrigin} />
         <Input title="Destination" options={destinationOptions} bg={false} setFunction={setDestination} />
         <Input title="Cabin Selection" options={cabinOptions} bg={true} setFunction={setCabin} />
-        <button type='submit' className='float-left bg-green-500 text-white p-2 rounded-md'>Search</button>
+        <div className='max-w-sm mx-auto' >
+          <button type='submit' className='float-left bg-green-500 text-white p-2 rounded-md w-28'>Search</button>
+        </div>
+        
       </form>
     </div>
   );

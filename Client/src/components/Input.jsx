@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Input({ title, options, bg, setFunction }) {
   return (
-    <div className={`mb-14 max-w-screen-md mx-auto ${!bg ? 'bg-gray-900' : 'bg-gray-800'} rounded-md`}>
-      <label htmlFor={title} className="float-left p-2 text-sm text-gray-900 dark:text-white">{title}</label>
+    <div className={`mb-14 max-w-sm mx-auto ${!bg ? 'bg-gray-900' : 'bg-gray-800'} rounded-md`}>
+      <label className="float-left p-2 text-sm text-gray-900 dark:text-white">{title}</label>
       <select 
         onChange={(e) => setFunction(e.target.value)} 
         name={title} 
