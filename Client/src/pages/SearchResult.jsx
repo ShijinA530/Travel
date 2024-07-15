@@ -12,7 +12,7 @@ export default function SearchResult({ results, origin, destination }) {
         {
           results && results.length > 0 ? (
             results.map((result, index) => (
-              <div key={index} className='rounded-lg items-center w-full md:max-w-[70%] bg-green-800'>
+              <div key={index} className='pt-6 pb-6 rounded-lg items-center w-full md:max-w-[70%] bg-green-800'>
                 <img className='w-24 h-24 mx-auto' src={img} alt="logo" />
                 <h2 className='text-3xl p-2'>{result.partner_program}</h2>
                 <h4 className='text-lg'>{origin} -> {destination }</h4>
