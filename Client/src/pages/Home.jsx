@@ -17,7 +17,7 @@ export default function Home({ results, setResults, origin, setOrigin, destinati
       console.log(selection);
 
       // Make the API call
-      const response = await axios.post('http://localhost:3000/update-request', selection);
+      const response = await axios.post('https://travelbackend-4ndo.onrender.com/update-request', selection);
       console.log('Response:', response.data);
 
       // Set the results in App state
