@@ -7,8 +7,8 @@ export default function SearchResult({ results, origin, destination }) {
   console.log(results);
 
   return (
-    <div className='mt-24'>
-      <section className='grid gap-8 md:grid-cols-2 items-center'>
+    <div className='mt-10 md:mt-20'>
+      <section className='mb-8 md:mb-14 grid gap-12 md:grid-cols-2 items-center'>
         {
           results && results.length > 0 ? (
             results.map((result, index) => (
